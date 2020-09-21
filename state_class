@@ -1,0 +1,51 @@
+htnml>
+<head>
+	<title>State Maintenance on a website</title>
+	<style type="text/css">
+		td{
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>State Maintenance in PHP</h1>
+	<p>An example of maintaining a state using a hidden form field and a  query string</p>
+	<table>
+		<tr>
+			<td><b>#</b></td><td><strong>Name and Surname</strong></td><td><strong>Actions</strong></td>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>Hanness Retief</td>
+			<td>
+				<a href="index.php?name=Hanness">Click</a> 
+				<br /><br/>
+				<form method = "get" action="index.php">
+					<input type="hidden" name="name" value="Hanness"> <input type="submit" value="Click" name="submiter">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>2.</td><td>Nkosazana Zuma</td>
+			<td>
+				<a href="index.php?name=Nkosazana">Click</a>
+				<br /><br/>
+				<form method = "get" action="index.php">
+					<input type="hidden" name="name" value="Nkosazana"> <input type="submit" value="Click" name="submiter">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>3.</td><td>Vusi Msimango</td><td>
+				<a href="index.php?name=Vusi">Click</a>
+				<br /><br/>
+				<form method = "get" action="index.php">
+					<input type="hidden" name="name" value="Vusi"> <input type="submit" value="Click" name="submiter">
+				</form>
+			</td>
+		</tr>
+
+	</table>
+	<h3>You clicked #<?php print isset($_GET['name']) ? $_GET['name'] : 'No name selected'; ?></h3>
+</body>
+</htnml>
